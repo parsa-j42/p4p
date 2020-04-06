@@ -13,3 +13,21 @@
 #   ...
 # Until the user guesses the number.
 # http://www.practicepython.org/exercise/2014/07/05/18-cows-and-bulls.html
+
+from random import randint
+def guess_compare():
+    cow = 0
+    bull = 0
+    user_guess = 0
+    while user_guess != "exit":
+        rand_number = randint(1000,9999)
+        user_guess = int(input("please guess a 4-digit number: "))
+        if user_guess == rand_number:
+            cow = cow + 1
+            print("cows: ",str(cow)," bulls: ",str(bull))
+        else:
+            bull = bull + 1
+            print("cows: ",str(cow)," bulls: ",str(bull))
+guess_compare()
+
+        
