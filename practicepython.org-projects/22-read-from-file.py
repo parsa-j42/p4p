@@ -13,7 +13,7 @@ while current_line:
         dareth += 1
     elif current_line == "Luke\n" or current_line == "Luke":
         luke += 1
-    elif current_line == "Lea\n" or cur"Lea":
+    elif current_line == "Lea\n" or current_line == "Lea":
         lea += 1
     else:
         other_names += 1
