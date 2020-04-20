@@ -14,6 +14,7 @@
 # As a bonus, you can ask the players if they want to play again and keep a running tally of who won more - Player 1 or Player 2.
 # http://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html
 def board_drawer(player,game_list):
+    [0,1,2,0,1,2]
     game_list = ["" if x==0 else "X" if x==2 else "O" if x==1 else x for x in game_list]
     print(game_list)
     print(" ---" * 3)  
@@ -37,11 +38,11 @@ def move_convertor(player,game_list):
     board_drawer(p_shape,game_list)
 #----------------------------------
 def winner_checker(game):
-    row_1, row_2, row_3 = game[0], game[1], game[2]
     father_list = game
     x = 0
     status = 0
     while x<6 :
+        [0,0,0,0,0,0,0,0,0,0]
         if father_list[x] == father_list[x+1] == father_list[x+2] :
             status = 1
             winner = father_list[x]
@@ -63,10 +64,16 @@ def winner_checker(game):
     else:
         return 0
 #----------------------------------
-
+print(" ---" * 5)  
+print("| 1,1","| 1,2","| 1,3","|")
+print(" ---" * 5)  
+print("| 2,1","| 2,2","| 2,3","|")
+print(" ---" * 5)  
+print("| 3,1","| 3,2","| 3,3","|")
+print(" ---" * 5)  
 game_list = [0,0,0,0,0,0,0,0,0]
 z = 0
-print("player 1 in O and player 2 is X")
+print("THIS IS TIC TAC TOE player 1 in O and player 2 is X")
 while winner_checker(game_list) == 0 and 0 in game_list:
     z = z+1
     if z % 2 == 0:
