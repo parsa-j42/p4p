@@ -66,6 +66,6 @@ def winner_checker(game):
     if status == 1 and winner != 0:
         print("winner is player %s" % winner)
     else:
-        print("no winner")
+        return 0
 winner_checker([[1, 2, 0],[2, 1, 0],[2, 1, 0]])
 input()

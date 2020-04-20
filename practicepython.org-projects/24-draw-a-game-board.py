@@ -20,11 +20,13 @@
 # Hint: this requires some use of functions, as were discussed previously on this blog and
 #  elsewhere on the Internet, like this TutorialsPoint link.
 # http://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html
-board_size = int(input("choose the size-number of your game board!: "))
-n = 0
-while n < board_size:
+def board_drawer():
+    board_size = int(input("choose the size-number of your game board!: "))
+    n = 0
+    while n < board_size:
+        print(" ---" * board_size)  
+        print("|   " * (board_size + 1))
+        n = n+1
     print(" ---" * board_size)  
-    print("|   " * (board_size + 1))
-    n = n+1
-print(" ---" * board_size)  
+board_drawer()
 input()
